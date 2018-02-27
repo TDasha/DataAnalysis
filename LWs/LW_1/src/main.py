@@ -1,3 +1,10 @@
+"""
+LabWork #1.
+
+Breast cancer: https://www.kaggle.com/uciml/breast-cancer-wisconsin-data
+
+Main procedure.
+"""
 import numpy as np
 from sklearn import cross_validation, neighbors
 import pandas as pd
@@ -32,18 +39,17 @@ test_df.drop(['#1'], 1, inplace=True)
 # вычеркнули столбец id, он не нужен
 # print(df, test_df, end=print_end, sep=print_end)
 X = np.array(df.drop(['#11'], 1))
-y = np.array(df['#11'])
+Y = np.array(df['#11'])
 testX = np.array(test_df.drop(['#11'], 1))
 testY = np.array(test_df['#11'])
 # отделили медицинские данные от прогнозов в обоих датафреймах
-# print(X, y, end=print_end, sep=print_end)
-# X_train, X_test, y_train, y_test = cross_validation.train_test_split(X, y, test_size=0.33)
-X_train, X_test, y_train, y_test = cross_validation.train_test_split(X, y, test_size=0.33, random_state=42)
-# print(X_train, X_test, y_train, y_test, sep=print_end, end=print_end)
+# print(X, Y, end=print_end, sep=print_end)
+X_train, X_test, Y_train, Y_test = cross_validation.train_test_split(X, Y, test_size=0.33, random_state=42)
+# print(X_train, X_test, Y_train, Y_test, sep=print_end, end=print_end)
 clf = neighbors.KNeighborsClassifier()
 # классификатор kNN = k Ближайших Соседей
-clf.fit(X_train, y_train)
-print(clf.predict(testX))
+clf.fit(X_train, Y_train)
+# print(clf.predict(testX))
 # обучили и смотрим точность
 accuracy = clf.score(testX, testY)
 print("Accuracy:", "%.6f" % accuracy, sep=" ")

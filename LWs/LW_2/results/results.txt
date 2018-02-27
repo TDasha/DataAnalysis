@@ -1,0 +1,159 @@
+1.
+Python 3.6.4 |Anaconda, Inc.| (default, Jan 16 2018, 10:22:32) [MSC v.1900 64 bit (AMD64)] on win32
+optimizer = SGD
+MODEL:
+model.add(Dense(800, input_dim=784, activation="relu", kernel_initializer="normal"))
+model.add(Dense(10, activation="softmax", kernel_initializer="normal"))
+batch_size = 200
+epochs = 100
+validation_split= 0.2
+accuracy = 0.9620
+loss = categorical_crossentropy = 0.1292
+ml time = 658.035984992981
+
+
+
+2.
+Python 3.6.4 |Anaconda, Inc.| (default, Jan 16 2018, 10:22:32) [MSC v.1900 64 bit (AMD64)] on win32
+optimizer = SGD
+MODEL:
+model.add(Dense(800, input_dim=784, activation="relu", kernel_initializer="normal"))
+model.add(Dense(10, activation="softmax", kernel_initializer="normal"))
+batch_size = 200
+epochs= 125
+validation_split= 0.2
+accuracy = 0.9666
+loss = categorical_crossentropy = 0.1148
+ml time = 866.6670427322388
+
+
+
+3.
+Python 3.6.4 |Anaconda, Inc.| (default, Jan 16 2018, 10:22:32) [MSC v.1900 64 bit (AMD64)] on win32
+optimizer = SGD
+MODEL:
+model.add(Dense(800, input_dim=784, activation="relu", kernel_initializer="normal"))
+model.add(Dense(10, activation="softmax", kernel_initializer="normal"))
+batch_size = 200
+epochs= 75
+validation_split= 0.2
+accuracy = 0.9568
+loss = categorical_crossentropy = 0.1498
+ml time = 530.5925424098969
+
+
+
+4.
+Python 3.6.4 |Anaconda, Inc.| (default, Jan 16 2018, 10:22:32) [MSC v.1900 64 bit (AMD64)] on win32
+optimizer = SGD
+MODEL:
+model.add(Dense(800, input_dim=784, activation="relu", kernel_initializer="normal"))
+model.add(Dense(10, activation="softmax", kernel_initializer="normal"))
+batch_size = 100
+epochs = 125
+validation_split= 0.2
+accuracy = 0.9777
+loss = categorical_crossentropy = 0.0822
+ml time = 1535.653234243393
+
+
+5.
+Python 3.6.4 |Anaconda, Inc.| (default, Jan 16 2018, 10:22:32) [MSC v.1900 64 bit (AMD64)] on win32
+optimizer = SGD
+MODEL:
+model.add(Dense(800, input_dim=784, activation="relu", kernel_initializer="normal"))
+model.add(Dense(10, activation="softmax", kernel_initializer="normal"))
+batch_size = 400
+epochs = 125
+validation_split= 0.2
+accuracy = 0.9539
+loss = categorical_crossentropy = 0.1641
+ml time = 847.1571979522705
+
+
+
+6.
+Python 3.6.4 |Anaconda, Inc.| (default, Jan 16 2018, 10:22:32) [MSC v.1900 64 bit (AMD64)] on win32
+optimizer = SGD
+MODEL:
+model.add(Dense(1200, input_dim=784, activation="relu", kernel_initializer="normal"))
+model.add(Dense(10, activation="softmax", kernel_initializer="normal"))
+batch_size = 200
+epochs = 100
+validation_split= 0.2
+accuracy = 0.966
+loss = categorical_crossentropy = 0.121537944502756
+ml time = 999.4472756385803
+
+
+
+7.
+Python 3.6.4 |Anaconda, Inc.| (default, Jan 16 2018, 10:22:32) [MSC v.1900 64 bit (AMD64)] on win32
+optimizer = SGD
+MODEL:
+model.add(Dense(400, input_dim=784, activation="relu", kernel_initializer="normal"))
+model.add(Dense(10, activation="softmax", kernel_initializer="normal"))
+batch_size = 200
+epochs = 100
+validation_split= 0.2
+accuracy = 0.9605
+loss = categorical_crossentropy = 0.138427103792876
+ml time = 8.
+Python 3.6.4 |Anaconda, Inc.| (default, Jan 16 2018, 10:22:32) [MSC v.1900 64 bit (AMD64)] on win32
+optimizer = SGD
+MODEL:
+model.add(Dense(400, input_dim=784, activation="relu", kernel_initializer="normal"))
+model.add(Dense(10, activation="softmax", kernel_initializer="normal"))
+batch_size = 200
+epochs = 100
+validation_split= 0.2
+accuracy = 0.9605
+loss = categorical_crossentropy = 0.13843670214936138
+ml time = 342.0957729816437
+
+
+
+8.
+Python 3.6.4 |Anaconda, Inc.| (default, Jan 16 2018, 10:22:32) [MSC v.1900 64 bit (AMD64)] on win32
+optimizer = SGD
+MODEL:
+model.add(Dense(400, input_dim=784, activation="relu", kernel_initializer="normal"))
+model.add(Dense(10, activation="softmax", kernel_initializer="normal"))
+batch_size = 200
+epochs = 100
+validation_split= 0.33
+accuracy = 0.9568
+loss = categorical_crossentropy = 0.15222311936095356
+ml time = 326.894966840744
+
+
+
+9.
+8.
+Python 3.6.4 |Anaconda, Inc.| (default, Jan 16 2018, 10:22:32) [MSC v.1900 64 bit (AMD64)] on win32
+optimizer = SGD
+MODEL:
+model.add(Dense(400, input_dim=784, activation="relu", kernel_initializer="normal"))
+model.add(Dense(10, activation="softmax", kernel_initializer="normal"))
+batch_size = 200
+epochs = 100
+validation_split= 0.1
+accuracy = 0.9636
+loss = categorical_crossentropy = 0.1282751037940383
+ml time = 388.2955415248871
+
+
+
+10.
+Python 3.6.4 |Anaconda, Inc.| (default, Jan 16 2018, 10:22:32) [MSC v.1900 64 bit (AMD64)] on win32
+optimizer = SGD
+MODEL:
+model.add(Dense(400, input_dim=784, activation="relu", kernel_initializer="normal"))
+model.add(Dense(200, activation="relu", kernel_initializer="normal"))
+model.add(Dense(10, activation="softmax", kernel_initializer="normal"))
+batch_size = 200
+epochs = 100
+validation_split= 0.2
+accuracy = 0.972
+loss = categorical_crossentropy = 0.09187437841612846
+ml time = 471.0552897453308

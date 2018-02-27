@@ -6,4 +6,6 @@
 <li>numpy</li>
 <li>sklearn</li>
 <li>scipy</li>
+<li>keras</li>
+<li>tensorflow</li>
 </ul>

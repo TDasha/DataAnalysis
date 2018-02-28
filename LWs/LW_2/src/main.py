@@ -39,19 +39,17 @@ model = Sequential()
 """
 Добавляем 2 уровня нейронной сети сети.
 Dense - тип сети, при котором все нейроны одного уровня соединены со всеми нейронами следующего уровня.
-"""
-model.add(Dense(400, input_dim=784, activation="relu", kernel_initializer="normal"))
-model.add(Dense(200, activation="relu", kernel_initializer="normal"))
-"""
-800 нейронов, 784 входа (по кол-ву пикселей в входном изображении), распределение НОРМАЛЬНОЕ, relu = ф-ция активации.
+распределение НОРМАЛЬНОЕ, relu = ф-ция активации.
 Входные веса инициализируются случайным значениями с помощью НОРМАЛЬНОГО распределения
 """
+model.add(Dense(1600, input_dim=784, activation="relu", kernel_initializer="normal"))
+model.add(Dense(800, activation="relu", kernel_initializer="normal"))
 model.add(Dense(10, activation="softmax", kernel_initializer="normal"))
 
 # Необходимо скомпилировать модель модель
-model.compile(loss="categorical_crossentropy", optimizer="SGD", metrics=["accuracy"])
+model.compile(loss="categorical_crossentropy", optimizer="ADAM", metrics=["accuracy"])
 """
-loss - мера ошибки, optimizer - метод обучения (используем SGD === метод стохастического градиентного спуска.
+loss - мера ошибки, optimizer - метод обучения (используем SGD === метод стохастического градиентного спуска).
 Оптимизацию выполняем по метрике ТОЧНОСТЬ
 """
 # Распечатали кратко характеристики модели
@@ -59,16 +57,15 @@ print(model.summary())
 
 # Обучаем сеть
 start_time = time.time()
-model.fit(X_train, Y_train, batch_size=200, epochs=100, validation_split=0.1, verbose=2)
+model.fit(X_train, Y_train, batch_size=100, epochs=5, validation_split=0.1, verbose=2)
 end_time = time.time()
 print("Время обучения %s секунд" % (end_time - start_time))
 """
 batch_size - минивыборка на основании которой определяется направление градиента в данном случае используем ее для
-каждых 200-сот (веса меняем после каждой).
+каждых 100 (веса меняем после каждой).
 epochs - сколько раз обучаем сеть на одном и том же наборе данных.
 verbose - флаг для вывода данных в консоль в процессе обучения
 validation_split =  размер проверочной выборки validation set (для контроля в процессе обучения).
-В данном случае 60000 * 0.2 = 12000.
 """
 # Оцениваем качество обучения сети на тестовых данных
 scores = model.evaluate(X_test, Y_test, verbose=0)

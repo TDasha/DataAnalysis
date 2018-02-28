@@ -97,17 +97,6 @@ batch_size = 200
 epochs = 100
 validation_split= 0.2
 accuracy = 0.9605
-loss = categorical_crossentropy = 0.138427103792876
-ml time = 8.
-Python 3.6.4 |Anaconda, Inc.| (default, Jan 16 2018, 10:22:32) [MSC v.1900 64 bit (AMD64)] on win32
-optimizer = SGD
-MODEL:
-model.add(Dense(400, input_dim=784, activation="relu", kernel_initializer="normal"))
-model.add(Dense(10, activation="softmax", kernel_initializer="normal"))
-batch_size = 200
-epochs = 100
-validation_split= 0.2
-accuracy = 0.9605
 loss = categorical_crossentropy = 0.13843670214936138
 ml time = 342.0957729816437
 

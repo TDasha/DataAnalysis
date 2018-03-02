@@ -6,6 +6,7 @@ Breast cancer: https://www.kaggle.com/uciml/breast-cancer-wisconsin-data
 Main procedure.
 """
 import numpy as np
+import time
 from sklearn import cross_validation, neighbors
 import pandas as pd
 import os
@@ -48,7 +49,10 @@ X_train, X_test, Y_train, Y_test = cross_validation.train_test_split(X, Y, test_
 # print(X_train, X_test, Y_train, Y_test, sep=print_end, end=print_end)
 clf = neighbors.KNeighborsClassifier()
 # классификатор kNN = k Ближайших Соседей
+start_time = time.time()
 clf.fit(X_train, Y_train)
+end_time = time.time()
+print("Время обучения %s секунд" % (end_time - start_time))
 # print(clf.predict(testX))
 # обучили и смотрим точность
 accuracy = clf.score(testX, testY)

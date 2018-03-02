@@ -8,4 +8,6 @@
 <li>scipy</li>
 <li>keras</li>
 <li>tensorflow</li>
+<li>seaborn</li>
+<li>jupyter</li>
 </ul>

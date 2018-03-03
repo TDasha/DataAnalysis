@@ -23,7 +23,11 @@ trainX = np.array(trainData.drop(['#12'], 1))
 trainY = np.array(trainData['#12'])
 testX = np.array(testData.drop(['#12'], 1))
 testY = np.array(testData['#12'])
-
+"""
+Столбцы измеряются в разных шкалах => необходима стандартизация данных: отнять среднее и поделить на стандартное 
+(среднеквадратичное, сигма) отклонение = sigma = sqrt((sum(x- averageX)^2)/n)
+axis=0 - для каждого признака
+"""
 mean = trainX.mean(axis=0)
 std = trainX.std(axis=0)
 trainX -= mean
@@ -32,7 +36,19 @@ mean = testX.mean(axis=0)
 std = testX.std(axis=0)
 testX -= mean
 testX /= std
+"""
+Нет конструктивного подхода к подбору кол-ва слоев и нейронов в сети.
 
+На выходном слое 1 нейрон, т.к. сеть должна выдавать нам только одно число - оценку качества вина.
+
+Так как нам нужно обычное действительное число не используем нелинейную ф-цию активации нейрона.
+
+mse = mean squared error = средняя квадратичная ошибка - часто используется в задачах регресии.
+mae = mean absolute error = средняя абсолютная ошибка
+
+Adam — adaptive moment estimation - адаптивная оценка момента - https://arxiv.org/pdf/1412.6980.pdf. 
+Он сочетает в себе и идею накопления движения и идею более слабого обновления весов для типичных признаков.
+"""
 model = Sequential()
 model.add(Dense(11, activation='relu', input_shape=(trainX.shape[1],),  kernel_initializer="normal"))
 model.add(Dense(1))

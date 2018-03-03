@@ -1,0 +1,217 @@
+1.
+Python 3.6.4 |Anaconda, Inc.| (default, Jan 16 2018, 10:22:32) [MSC v.1900 64 bit (AMD64)] on win32
+optimizer = ADAM
+MODEL:
+model = Sequential()
+model.add(Dense(128, activation='relu', input_shape=(trainX.shape[1],)))
+model.add(Dense(1))
+batch_size = 1
+epochs = 100
+mean_absolute_error= 0.5399710162480672
+loss = mse = 0.3877
+ml time = 363.64566445350647
+
+
+
+2.
+Python 3.6.4 |Anaconda, Inc.| (default, Jan 16 2018, 10:22:32) [MSC v.1900 64 bit (AMD64)] on win32
+optimizer = SGD
+MODEL:
+model = Sequential()
+model.add(Dense(128, activation='relu', input_shape=(trainX.shape[1],)))
+model.add(Dense(1))
+batch_size = 1
+epochs = 100
+mean_absolute_error= 0.541698719660441
+loss = mse = 0.4500
+ml time = 340.72220158576965
+
+
+
+3.
+Python 3.6.4 |Anaconda, Inc.| (default, Jan 16 2018, 10:22:32) [MSC v.1900 64 bit (AMD64)] on win32
+optimizer = ADAM
+MODEL:
+model = Sequential()
+model.add(Dense(75, activation='relu', input_shape=(trainX.shape[1],)))
+model.add(Dense(1))
+batch_size = 1
+epochs = 100
+mean_absolute_error= 0.5254698631498549
+loss = mse = 0.4106
+ml time = 314.0792610645294
+
+
+
+4.
+Python 3.6.4 |Anaconda, Inc.| (default, Jan 16 2018, 10:22:32) [MSC v.1900 64 bit (AMD64)] on win32
+optimizer = ADAM
+MODEL:
+model = Sequential()
+model.add(Dense(50, activation='relu', input_shape=(trainX.shape[1],)))
+model.add(Dense(1))
+batch_size = 1
+epochs = 100
+mean_absolute_error = 0.5292234145270454
+loss = mse = 0.4338
+ml time = 317.70083713531494
+
+
+
+5.
+Python 3.6.4 |Anaconda, Inc.| (default, Jan 16 2018, 10:22:32) [MSC v.1900 64 bit (AMD64)] on win32
+optimizer = ADAM
+MODEL:
+model.add(Dense(75, activation='relu', input_shape=(trainX.shape[1],)))
+model.add(Dense(25, activation='relu'))
+model.add(Dense(10, activation='relu'))
+model.add(Dense(1))
+batch_size = 1
+epochs = 100
+mean_absolute_error = 0.6587986389795939
+loss = mse = loss: 0.2404
+ml time = 328.7626986503601
+
+
+
+6.
+Python 3.6.4 |Anaconda, Inc.| (default, Jan 16 2018, 10:22:32) [MSC v.1900 64 bit (AMD64)] on win32
+optimizer = ADAM
+MODEL:
+model.add(Dense(200, activation='relu', input_shape=(trainX.shape[1],)))
+model.add(Dense(1))
+batch_size = 1
+epochs = 100
+mean_absolute_error = 0.5818310864766438
+loss = mse = 0.3731
+ml time = 317.5667405128479
+
+
+
+7.
+Python 3.6.4 |Anaconda, Inc.| (default, Jan 16 2018, 10:22:32) [MSC v.1900 64 bit (AMD64)] on win32
+optimizer = ADAM
+MODEL:
+model.add(Dense(90, activation='tanh', input_shape=(trainX.shape[1],)))
+model.add(Dense(1))
+batch_size = 1
+epochs = 100
+mean_absolute_error = 0.5524915255440606
+loss = mse = 0.4040
+ml time = 312.1611785888672
+
+
+
+8.
+Python 3.6.4 |Anaconda, Inc.| (default, Jan 16 2018, 10:22:32) [MSC v.1900 64 bit (AMD64)] on win32
+optimizer = ADAM
+MODEL:
+model.add(Dense(60, activation='tanh', input_shape=(trainX.shape[1],)))
+model.add(Dense(1))
+batch_size = 1
+epochs = 100
+mean_absolute_error = 0.5382652775446574
+loss = mse = 0.4224
+ml time = 344.5460731983185
+
+
+
+9.
+Python 3.6.4 |Anaconda, Inc.| (default, Jan 16 2018, 10:22:32) [MSC v.1900 64 bit (AMD64)] on win32
+optimizer = ADAM
+MODEL:
+model.add(Dense(70, activation='tanh', input_shape=(trainX.shape[1],),  kernel_initializer="normal"))
+model.add(Dense(1))
+batch_size = 1
+epochs = 100
+mean_absolute_error = 0.5305
+loss = mse = 0.4607
+ml time = 356.9424521923065
+
+
+
+10.
+Python 3.6.4 |Anaconda, Inc.| (default, Jan 16 2018, 10:22:32) [MSC v.1900 64 bit (AMD64)] on win32
+optimizer = ADAM
+MODEL:
+model.add(Dense(11, activation='relu', input_shape=(trainX.shape[1],),  kernel_initializer="normal"))
+model.add(Dense(1))
+batch_size = 1
+epochs = 100
+mean_absolute_error = 0.48821266916063094
+loss = mse = 0.5120
+ml time = 334.2570569515228
+
+
+
+11.
+Python 3.6.4 |Anaconda, Inc.| (default, Jan 16 2018, 10:22:32) [MSC v.1900 64 bit (AMD64)] on win32
+optimizer = ADAM
+MODEL:
+model.add(Dense(11, activation='relu', input_shape=(trainX.shape[1],),  kernel_initializer="normal"))
+model.add(Dense(6, activation='relu',  kernel_initializer="normal"))
+model.add(Dense(1))
+batch_size = 1
+epochs = 100
+mean_absolute_error = 0.5063389221827189
+loss = mse = 0.4912
+ml time = 336.0965015888214
+
+
+
+12.
+Python 3.6.4 |Anaconda, Inc.| (default, Jan 16 2018, 10:22:32) [MSC v.1900 64 bit (AMD64)] on win32
+optimizer = ADAM
+MODEL:
+model.add(Dense(11, activation='relu', input_shape=(trainX.shape[1],),  kernel_initializer="normal"))
+model.add(Dense(6, activation='relu',  kernel_initializer="normal"))
+model.add(Dense(3, activation='relu'))
+model.add(Dense(1))
+batch_size = 1
+epochs = 100
+mean_absolute_error = 0.5100480545891656
+loss = mse = 0.4796
+ml time = 347.0661828517914
+
+
+
+13.
+Python 3.6.4 |Anaconda, Inc.| (default, Jan 16 2018, 10:22:32) [MSC v.1900 64 bit (AMD64)] on win32
+optimizer = ADAM
+MODEL:
+model.add(Dense(11, activation='relu', input_shape=(trainX.shape[1],),  kernel_initializer="normal"))
+model.add(Dense(1))
+batch_size = 1
+epochs = 300
+mean_absolute_error = 0.4801968971888224
+loss = mse = 0.5030
+ml time = 906.0348238945007
+
+
+
+14.
+Python 3.6.4 |Anaconda, Inc.| (default, Jan 16 2018, 10:22:32) [MSC v.1900 64 bit (AMD64)] on win32
+optimizer = ADAM
+MODEL:
+model.add(Dense(11, activation='relu', input_shape=(trainX.shape[1],),  kernel_initializer="normal"))
+model.add(Dense(6, activation='relu',  kernel_initializer="normal"))
+model.add(Dense(1))
+batch_size = 1
+epochs = 300
+mean_absolute_error = 0.5234038135740492
+loss = mse = 0.4760
+ml time = 1033.9334239959717
+
+
+
+15.
+Python 3.6.4 |Anaconda, Inc.| (default, Jan 16 2018, 10:22:32) [MSC v.1900 64 bit (AMD64)] on win32
+optimizer = ADAM
+MODEL:
+model.add(Dense(11, activation='relu', input_shape=(trainX.shape[1],),  kernel_initializer="normal"))
+model.add(Dense(1))
+batch_size = 1
+epochs = 1000
+mean_absolute_error =
+loss = mse =
+ml time =

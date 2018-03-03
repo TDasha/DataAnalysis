@@ -211,7 +211,27 @@ MODEL:
 model.add(Dense(11, activation='relu', input_shape=(trainX.shape[1],),  kernel_initializer="normal"))
 model.add(Dense(1))
 batch_size = 1
+epochs = 10
+mean_absolute_error = 0.4866775417327881
+loss = mse = 0.5469
+ml time = 32.43308138847351
+
+
+
+16.
+Python 3.6.4 |Anaconda, Inc.| (default, Jan 16 2018, 10:22:32) [MSC v.1900 64 bit (AMD64)] on win32
+optimizer = ADAM
+MODEL:
+model.add(Dense(11, activation='relu', input_shape=(trainX.shape[1],),  kernel_initializer="normal"))
+model.add(Dense(1))
+batch_size = 1
 epochs = 1000
-mean_absolute_error =
-loss = mse =
-ml time =
+mean_absolute_error = 0.49
+ml time = 3147
+
+
+
+========================================================================================================================
+10, 13, 15 16
+========================================================================================================================
+///Radge regressor, LASSOREGRESSOR

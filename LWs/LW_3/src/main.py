@@ -39,7 +39,7 @@ model.add(Dense(1))
 model.compile(optimizer='ADAM', loss='mse', metrics=['mae'])
 
 start_time = time()
-model.fit(trainX, trainY, epochs=1000, batch_size=1, verbose=2)
+model.fit(trainX, trainY, epochs=10, batch_size=1, verbose=2)
 print("Время обучения :", time() - start_time, "секунд", sep=" ")
 
 mse, mae = model.evaluate(testX, testY, verbose=0)

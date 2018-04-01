@@ -27,9 +27,9 @@ import os
   11. Class:                        (2 for benign = доброкачественная, 4 for malignant = злокачественная)
 """
 print_end = "\n----------------------------------------------------------------------------------------------\n"
-dir_path = os.path.dirname(os.path.abspath(os.path.join(os.path.realpath(__file__), os.pardir)))
-df = pd.read_csv(dir_path + '\\data\\train.csv')
-test_df = pd.read_csv(dir_path + '\\data\\test.csv')
+# dir_path = os.path.dirname(os.path.abspath(os.path.join(os.path.realpath(__file__), os.pardir)))
+df = pd.read_csv('../data/train.csv')
+test_df = pd.read_csv('../data/test.csv')
 # print(df, test_df, end=print_end, sep=print_end)
 df.replace('?', -99999, inplace=True)
 test_df.replace('?', -99999, inplace=True)

@@ -42,12 +42,10 @@ Dense - тип сети, при котором все нейроны одног�
 распределение НОРМАЛЬНОЕ, relu = ф-ция активации.
 Входные веса инициализируются случайным значениями с помощью НОРМАЛЬНОГО распределения
 """
-model.add(Dense(1600, input_dim=784, activation="relu", kernel_initializer="normal"))
-model.add(Dense(800, activation="relu", kernel_initializer="normal"))
+model.add(Dense(100, input_dim=784, activation="relu", kernel_initializer="normal"))
 model.add(Dense(10, activation="softmax", kernel_initializer="normal"))
-
-# Необходимо скомпилировать модель модель
 model.compile(loss="categorical_crossentropy", optimizer="ADAM", metrics=["accuracy"])
+# Необходимо скомпилировать модель модель
 """
 loss - мера ошибки, optimizer - метод обучения (используем SGD === метод стохастического градиентного спуска).
 Оптимизацию выполняем по метрике ТОЧНОСТЬ
@@ -70,4 +68,11 @@ validation_split =  размер проверочной выборки validatio
 # Оцениваем качество обучения сети на тестовых данных
 scores = model.evaluate(X_test, Y_test, verbose=0)
 print(scores)
-print("Точность работы на тестовых данных: %.2f%%" % (scores[1] * 100))
+# print("Точность работы на тестовых данных: %.2f%%" % (scores[1] * 100))
+print("Точность работы на тестовых данных: " + str(scores[1] * 100))
+# modelAsJSON = model.to_json()
+# fileName = "../results/" + str(int(time.time()))
+# with open(fileName, "w") as json_file:
+#     json_file.write(modelAsJSON + "\n")
+#     json_file.write("ML time: " + str(end_time - start_time) + "\n")
+#     json_file.write("Accuracy: " + str(scores[1]) + "\n")

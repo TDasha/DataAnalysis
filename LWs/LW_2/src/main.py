@@ -8,7 +8,7 @@ Main procedure.
 import numpy
 from keras.datasets import mnist
 from keras.models import Sequential
-from keras.layers import Dense
+from keras.layers import Dense, Dropout
 from keras.utils import np_utils
 import time
 
@@ -42,7 +42,16 @@ Dense - тип сети, при котором все нейроны одног�
 распределение НОРМАЛЬНОЕ, relu = ф-ция активации.
 Входные веса инициализируются случайным значениями с помощью НОРМАЛЬНОГО распределения
 """
-model.add(Dense(100, input_dim=784, activation="relu", kernel_initializer="normal"))
+model.add(Dense(512, input_dim=784, activation="relu", kernel_initializer="normal"))
+model.add(Dropout(0.5))
+model.add(Dense(256, activation="relu", kernel_initializer="normal"))
+model.add(Dropout(0.5))
+model.add(Dense(128, activation="relu", kernel_initializer="normal"))
+model.add(Dropout(0.5))
+model.add(Dense(64, activation="relu", kernel_initializer="normal"))
+model.add(Dropout(0.5))
+model.add(Dense(32, activation="relu", kernel_initializer="normal"))
+model.add(Dropout(0.5))
 model.add(Dense(10, activation="softmax", kernel_initializer="normal"))
 model.compile(loss="categorical_crossentropy", optimizer="ADAM", metrics=["accuracy"])
 # Необходимо скомпилировать модель модель
@@ -55,7 +64,7 @@ print(model.summary())
 
 # Обучаем сеть
 start_time = time.time()
-model.fit(X_train, Y_train, batch_size=100, epochs=5, validation_split=0.1, verbose=2)
+model.fit(X_train, Y_train, batch_size=60, epochs=60, validation_split=0.1, verbose=2)
 end_time = time.time()
 print("Время обучения %s секунд" % (end_time - start_time))
 """

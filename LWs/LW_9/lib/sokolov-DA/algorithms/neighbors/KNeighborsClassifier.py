@@ -3,8 +3,9 @@ from pandas.compat import numpy as np
 
 class KNeighborsClassifier:
 
-    def __init__(self) -> None:
-        super().__init__()
+    def __init__(self, train_X, train_Y) -> None:
+        train_X = train_X
+        train_Y = train_Y
 
     def fit(self, X, y):
         pass
@@ -16,4 +17,4 @@ class KNeighborsClassifier:
         pass
 
     def distance(self, x, y):
-        return np.sqrt(((x - y) ** 2).sum())
+        return np.linalg.norm(x-y)

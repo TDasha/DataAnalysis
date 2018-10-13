@@ -1,6 +1,5 @@
-from abc import ABC, abstractmethod
+from abc import ABC
 from lib.data_analysis.metrics.Metrics import Metrics
-import math
 from collections import defaultdict
 from operator import itemgetter
 
@@ -24,7 +23,6 @@ class KNeighbors(ABC):
             closest_labels_knn = [self.__train_Y[x] for x in closest_knn]
             y_test.append(self.__get_most_common_item(closest_labels_knn))
         self._test_Answers = y_test
-        return self
 
     def __get_most_common_item(self, array):
         count_dict = defaultdict(int)

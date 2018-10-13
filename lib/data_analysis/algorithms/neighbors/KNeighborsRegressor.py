@@ -3,5 +3,5 @@ from .KNeighbors import KNeighbors
 
 class KNeighborsRegressor(KNeighbors):
 
-    def predict(self, vector):
-        pass
+    def predict(self):
+        return self._test_Answers

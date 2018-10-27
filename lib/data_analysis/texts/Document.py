@@ -1,5 +1,4 @@
 from .Preprocessing import Preprocessing
-import re
 
 
 class Document:

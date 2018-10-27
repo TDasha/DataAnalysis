@@ -3,9 +3,8 @@ import re
 import pymorphy2
 from lib.data_analysis.texts import Document
 
+
 class Preprocessing:
-
-
     morphAnalyzer = pymorphy2.MorphAnalyzer()
 
     @staticmethod
@@ -14,7 +13,7 @@ class Preprocessing:
 
     @staticmethod
     def convertDocumentToListOfWords(document: Document) -> list:
-        return re.sub("[^\w]", " ",  document.getText()).split()
+        return re.sub("[^\w]", " ", document.getText()).split()
 
     @staticmethod
     def convertListOfWordsToNormalForms(list_of_words: list) -> list:

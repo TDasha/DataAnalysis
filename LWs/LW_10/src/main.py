@@ -1,9 +1,7 @@
 from lib.data_analysis.algorithms.texts.PLSA import PLSA
-from lib.data_analysis.texts.Preprocessing import Preprocessing
 from lib.data_analysis.texts.StopWords import StopWords
 from lib.data_analysis.texts.Corpus import Corpus
 from os import getcwd
-from os import mknod
 import pandas as pd
 
 sw = StopWords("/home/sokolov/PycharmProjects/t/DataAnalysis/lib/data_analysis/texts/stopwords.dic")
@@ -53,3 +51,4 @@ topicWords = 'topics.txt'
 topicWords = getcwd() + "/../results/" + topicWords
 
 plsa = PLSA(corpus, sw, K, maxIteration, threshold, topicWordsNum, docTopicDist, topicWordDist, dictionary, topicWords)
+plsa.EM_Algo()

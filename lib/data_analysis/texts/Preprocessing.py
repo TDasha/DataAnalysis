@@ -41,3 +41,10 @@ class Preprocessing:
         wl = nltk.WordNetLemmatizer()
         w = wl.lemmatize(word.lower())
         return w
+
+    @staticmethod
+    def convert_word_list_to_text(word_list: list) -> str:
+        text = str()
+        for word in word_list:
+            text += word + str(" ")
+        return text

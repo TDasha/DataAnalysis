@@ -1,5 +1,5 @@
 from .Document import Document
-
+from lib.data_analysis.texts.Preprocessing import Preprocessing
 
 class Corpus:
 

@@ -7,20 +7,20 @@ class Corpus:
         self.__pathToFile = ''
         self.__documents = []
 
-    def loadCorpusFromFile(self) -> None:
+    def load_corpus_from_file(self) -> None:
         pass
 
-    def loadCorpusFromList(self, documents: list, tags: list = []) -> None:
+    def load_corpus_from_list(self, documents: list, tags: list = []) -> None:
         for index in range(len(documents)):
             try:
                 self.__documents.append(Document(documents[index], tags[index]))
             except IndexError:
                 self.__documents.append(Document(documents[index], ''))
 
-    def getDocuments(self) -> list:
+    def get_documents(self) -> list:
         return self.__documents
 
-    def getDocumentByIndex(self, index: int) -> Document:
+    def get_document_by_index(self, index: int) -> Document:
         try:
             return self.__documents[index]
         except IndexError:

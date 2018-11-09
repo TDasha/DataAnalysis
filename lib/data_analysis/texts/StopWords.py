@@ -7,11 +7,14 @@ class StopWords:
         self._stopWords = []
         self.__pathToFileWithStopWords = pathToFileWithStopWords
 
-    def getStopWords(self) -> list:
+    def get_stop_words(self) -> list:
         return self._stopWords
 
-    def loadStopWordsFromFile(self) -> None:
+    def load_stop_words_from_file(self) -> None:
         file = codecs.open(self.__pathToFileWithStopWords, 'r', 'utf-8')
         stopWords = [line.strip() for line in file]
         file.close()
         self._stopWords = stopWords
+
+    def is_stop_word(self, stopWord: str):
+        return stopWord in self._stopWords

@@ -8,20 +8,20 @@ class Preprocessing:
     morphAnalyzer = pymorphy2.MorphAnalyzer()
 
     @staticmethod
-    def convertTextToListOfWords(text: str) -> list:
+    def convert_text_to_list_of_words(text: str) -> list:
         return re.sub("[^\w]", " ", text).split()
 
     @staticmethod
-    def convertDocumentToListOfWords(document: Document) -> list:
-        return re.sub("[^\w]", " ", document.getText()).split()
+    def convert_document_to_list_of_words(document: Document) -> list:
+        return re.sub("[^\w]", " ", document.get_text()).split()
 
     @staticmethod
-    def convertListOfWordsToNormalForms(list_of_words: list) -> list:
+    def convert_list_of_words_to_normal_forms(list_of_words: list) -> list:
         normalized_list_of_words = [Preprocessing.morphAnalyzer.normal_forms(word)[0] for word in list_of_words]
         return normalized_list_of_words
 
     @staticmethod
-    def removeStopWordsFromListOfWords(stop_words: list, list_of_words: list) -> list:
+    def remove_stop_words_from_list_of_words(stop_words: list, list_of_words: list) -> list:
         copy_set_of_words = copy.copy(list_of_words)
         copy_set_of_stop_words = copy.copy(stop_words)
         answer = copy.copy(copy_set_of_words)

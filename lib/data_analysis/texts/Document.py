@@ -8,21 +8,21 @@ class Document:
         self._text_as_list = []
         self._tag = tag.strip()
 
-    def getText(self) -> str:
+    def get_text(self) -> str:
         return self._text
 
-    def getTag(self) -> str:
+    def get_tag(self) -> str:
         return self._tag
 
-    def setText(self, text: str) -> None:
+    def set_text(self, text: str) -> None:
         self._text = text.strip()
         self._text_as_list = []
 
-    def setTag(self, tag: str = '') -> None:
+    def set_tag(self, tag: str = '') -> None:
         self._tag = tag.strip()
 
-    def convertTextToListOfWords(self) -> None:
-        self._text_as_list = Preprocessing.convertTextToListOfWords(self._text)
+    def convert_text_to_list_of_words(self) -> None:
+        self._text_as_list = Preprocessing.convert_text_to_list_of_words(self._text)
 
-    def getTextAsListOfWords(self) -> list:
+    def get_text_as_list_of_words(self) -> list:
         return self._text_as_list

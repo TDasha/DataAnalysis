@@ -1,5 +1,7 @@
 import codecs
 
+import nltk
+
 
 class StopWords:
 
@@ -15,6 +17,10 @@ class StopWords:
         stopWords = [line.strip() for line in file]
         file.close()
         self._stopWords = stopWords
+
+    def load_stop_word_from_nltk_lib(self) -> None:
+        stopwords_list = nltk.corpus.stopwords.words('russian')
+        self._stopWords.append(list(set(stopwords_list)))
 
     def is_stop_word(self, stopWord: str):
         return stopWord in self._stopWords

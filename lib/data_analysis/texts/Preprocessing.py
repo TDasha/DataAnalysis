@@ -1,3 +1,4 @@
+import nltk
 import copy
 import re
 import pymorphy2
@@ -21,6 +22,10 @@ class Preprocessing:
         return normalized_list_of_words
 
     @staticmethod
+    def convert_word_to_normal_form(word: str) -> str:
+        return Preprocessing.morphAnalyzer.normal_forms(word)[0]
+
+    @staticmethod
     def remove_stop_words_from_list_of_words(stop_words: list, list_of_words: list) -> list:
         copy_set_of_words = copy.copy(list_of_words)
         copy_set_of_stop_words = copy.copy(stop_words)
@@ -30,3 +35,9 @@ class Preprocessing:
                 if word == stop_word:
                     answer = list(filter(lambda el: el != stop_word, answer))
         return list(answer)
+
+    @staticmethod
+    def lemmatize(word: str):
+        wl = nltk.WordNetLemmatizer()
+        w = wl.lemmatize(word.lower())
+        return w

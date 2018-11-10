@@ -1,6 +1,6 @@
-from lib.data_analysis.algorithms.texts.PLSA import PLSA
-from lib.data_analysis.texts.StopWords import StopWords
-from lib.data_analysis.texts.Corpus import Corpus
+from lib.data_analysis.algorithms.texts.plsa import PLSA
+from lib.data_analysis.texts.stop_words import StopWords
+from lib.data_analysis.texts.corpus import Corpus
 from os import getcwd
 import pandas as pd
 

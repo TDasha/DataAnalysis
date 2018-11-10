@@ -5,9 +5,9 @@ from numpy import log
 from numpy import int8
 from numpy import zeros
 from pylab import random
-from ...texts.StopWords import StopWords
-from ...texts.Corpus import Corpus
-from ...texts.Preprocessing import Preprocessing
+from ...texts.stop_words import StopWords
+from ...texts.corpus import Corpus
+from ...texts.preprocessing import Preprocessing
 
 
 class PLSA:

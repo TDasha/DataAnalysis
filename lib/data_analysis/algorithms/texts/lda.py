@@ -1,13 +1,11 @@
 import numpy
-from lib.data_analysis.texts.Corpus import Corpus
-from lib.data_analysis.texts.Vocabulary import Vocabulary
-from lib.data_analysis.texts.StopWords import StopWords
+from lib.data_analysis.texts.vocabulary import Vocabulary
 
 
 class LDA:
 
-    def __init__(self, corpus: Corpus = None, stop_words: StopWords = None, K: int = 20, alpha: float = 0.5,
-                 beta: float = 0.5, iterations: int = 50):
+    def __init__(self, corpus=None, stop_words=None, K=20, alpha=0.5,
+                 beta=0.5, iterations=50):
 
         self.vocabulary = Vocabulary(stop_words, excluds_stopwords=False)
         docs = [self.vocabulary.doc_to_ids(doc.get_text()) for doc in corpus.get_documents()]

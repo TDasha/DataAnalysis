@@ -1,6 +1,6 @@
-from lib.data_analysis.algorithms.texts.LDA import LDA
-from lib.data_analysis.texts.StopWords import StopWords
-from lib.data_analysis.texts.Corpus import Corpus
+from lib.data_analysis.algorithms.texts.lda import LDA
+from lib.data_analysis.texts.stop_words import StopWords
+from lib.data_analysis.texts.corpus import Corpus
 import pandas as pd
 
 sw = StopWords("/home/sokolov/PycharmProjects/t/DataAnalysis/lib/data_analysis/texts/stopwords.dic")

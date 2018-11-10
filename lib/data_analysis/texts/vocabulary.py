@@ -1,11 +1,11 @@
 import re
-from lib.data_analysis.texts.StopWords import StopWords
-from lib.data_analysis.texts.Preprocessing import Preprocessing
+from lib.data_analysis.texts.stop_words import StopWords
+from lib.data_analysis.texts.preprocessing import Preprocessing
 
 
 class Vocabulary:
 
-    def __init__(self, stop_words: StopWords, excluds_stopwords=False):
+    def __init__(self, stop_words, excluds_stopwords=False):
         self.stop_words = stop_words.get_stop_words()
         self.vocas = []  # id to word
         self.vocas_id = dict()  # word to id

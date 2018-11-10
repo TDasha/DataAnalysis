@@ -1,3 +1,4 @@
-from . import Corpus
-from . import Document
-from . import Preprocessing
+from . import corpus
+from . import document
+from . import preprocessing
+from . import vocabulary

@@ -5,9 +5,9 @@ from numpy import log
 from numpy import int8
 from numpy import zeros
 from pylab import random
-from ...texts.StopWords import StopWords
-from ...texts.Corpus import Corpus
-from ...texts.Preprocessing import Preprocessing
+from ...texts.stop_words import StopWords
+from ...texts.corpus import Corpus
+from ...texts.preprocessing import Preprocessing
 
 
 class PLSA:
@@ -25,21 +25,21 @@ class PLSA:
         self._dictionary = dictionary
         self._topicWords = topicWords
 
-        self._N = len(corpus.getDocuments())
+        self._N = len(corpus.get_documents())
         self._wordCounts = []
         self._word2id = {}
         self._id2word = {}
         self._currentId = 0
 
-        for document in corpus.getDocuments():
-            normalized_list = Preprocessing.convertListOfWordsToNormalForms(Preprocessing
-                                                                            .convertDocumentToListOfWords(document))
-            self._segList = Preprocessing.removeStopWordsFromListOfWords(self._stopWords.getStopWords(),
-                                                                         normalized_list)
+        for document in corpus.get_documents():
+            normalized_list = Preprocessing.convert_list_of_words_to_normal_forms(Preprocessing
+                                                                                  .convert_document_to_list_of_words(document))
+            self._segList = Preprocessing.remove_stop_words_from_list_of_words(self._stopWords.get_stop_words(),
+                                                                               normalized_list)
             self._wordCount = {}
             for word in self._segList:
                 word = word.lower().strip()
-                if len(word) > 1 and not re.search('[0-9]', word) and word not in self._stopWords.getStopWords():
+                if len(word) > 1 and not re.search('[0-9]', word) and word not in self._stopWords.get_stop_words():
                     if word not in self._word2id.keys():
                         self._word2id[word] = self._currentId
                         self._id2word[self._currentId] = word
@@ -70,7 +70,7 @@ class PLSA:
         # p[i, j, k] : p(zk|di,wj)
         self._p = zeros([self._N, self._M, self._K])
 
-    def initializeParameters(self) -> None:
+    def initialize_parameters(self) -> None:
         for i in range(0, self._N):
             self._normalization = sum(self._lamda[i, :])
             for j in range(0, self._K):
@@ -81,14 +81,14 @@ class PLSA:
             for j in range(0, self._M):
                 self._theta[i, j] /= self._normalization
 
-    def EM_Algo(self) -> None:
+    def em_algorithm(self) -> None:
         # EM algorithm
         oldLoglikelihood = 1
         newLoglikelihood = 1
         for i in range(0, self._maxIteration):
-            self._EStep()
-            self._MStep()
-            newLoglikelihood = self._LogLikelihood()
+            self._e_step()
+            self._m_step()
+            newLoglikelihood = self._log_likelihood()
             print("[", time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time())), "] ", i + 1, " iteration  ",
                   str(newLoglikelihood))
             if oldLoglikelihood != 1 and newLoglikelihood - oldLoglikelihood < self._threshold:
@@ -96,7 +96,7 @@ class PLSA:
             oldLoglikelihood = newLoglikelihood
         self._output()
 
-    def _EStep(self) -> None:
+    def _e_step(self) -> None:
         for i in range(0, self._N):
             for j in range(0, self._M):
                 denominator = 0
@@ -110,7 +110,7 @@ class PLSA:
                     for k in range(0, self._K):
                         self._p[i, j, k] /= denominator
 
-    def _MStep(self) -> None:
+    def _m_step(self) -> None:
         # update theta
         for k in range(0, self._K):
             denominator = 0
@@ -140,7 +140,7 @@ class PLSA:
                     self._lamda[i, k] /= denominator
 
     # calculate the log likelihood
-    def _LogLikelihood(self) -> int:
+    def _log_likelihood(self) -> int:
         loglikelihood = 0
         for i in range(0, self._N):
             for j in range(0, self._M):

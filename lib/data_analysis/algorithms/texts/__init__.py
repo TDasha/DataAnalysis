@@ -1,1 +1,2 @@
-from . import PLSA
+from . import plsa
+from . import lda

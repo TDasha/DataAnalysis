@@ -16,6 +16,7 @@ apt-get install git build-essential libboost-all-dev
 sudo apt-get install cmake
 sudo pip install -U pip
 sudo pip install -U numpy scipy pandas protobuf==3.0.0 tqdm wheel
+sudo apt-get install python2.7
 
 wget https://bootstrap.pypa.io/get-pip.py
 python get-pip.py

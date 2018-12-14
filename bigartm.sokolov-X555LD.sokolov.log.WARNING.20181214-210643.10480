@@ -1,0 +1,24 @@
+Log file created at: 2018/12/14 21:06:43
+Running on machine: sokolov-X555LD
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+W1214 21:06:43.479554 10512 helpers.cc:221] File already exists: batch_vectorizer_target_folder/aaaaaa.batch
+W1214 21:06:43.481482 10511 helpers.cc:221] File already exists: batch_vectorizer_target_folder/aaaaab.batch
+W1214 21:06:43.485009 10514 helpers.cc:221] File already exists: batch_vectorizer_target_folder/aaaaad.batch
+W1214 21:06:43.486126 10513 helpers.cc:221] File already exists: batch_vectorizer_target_folder/aaaaac.batch
+W1214 21:06:43.514755 10514 helpers.cc:221] File already exists: batch_vectorizer_target_folder/aaaaag.batch
+W1214 21:06:43.518172 10512 helpers.cc:221] File already exists: batch_vectorizer_target_folder/aaaaah.batch
+W1214 21:06:43.525573 10511 helpers.cc:221] File already exists: batch_vectorizer_target_folder/aaaaaf.batch
+W1214 21:06:43.527020 10513 helpers.cc:221] File already exists: batch_vectorizer_target_folder/aaaaae.batch
+W1214 21:06:43.529652 10514 helpers.cc:221] File already exists: batch_vectorizer_target_folder/aaaaai.batch
+W1214 21:06:43.535964 10512 helpers.cc:221] File already exists: batch_vectorizer_target_folder/aaaaaj.batch
+E1214 21:06:49.861272 10480 c_interface.cc:59] InvalidOperation :  Dictionary 'dictionary' does not exist
+E1214 21:06:58.122759 10480 c_interface.cc:59] InvalidOperation :  Dictionary 'dictionary' does not exist
+E1214 21:07:04.265051 10480 c_interface.cc:59] InvalidOperation :  Dictionary 'dictionary' does not exist
+E1214 21:07:11.741492 10480 c_interface.cc:59] InvalidOperation :  Dictionary 'dictionary' does not exist
+E1214 21:07:20.391502 10480 c_interface.cc:59] InvalidOperation :  Dictionary 'dictionary' does not exist
+E1214 21:07:28.565881 10480 c_interface.cc:59] InvalidOperation :  Dictionary 'dictionary' does not exist
+E1214 21:07:35.576957 10480 c_interface.cc:59] InvalidOperation :  Dictionary 'dictionary' does not exist
+E1214 21:07:41.419350 10480 c_interface.cc:59] InvalidOperation :  Dictionary 'dictionary' does not exist
+E1214 21:07:50.007038 10480 c_interface.cc:59] InvalidOperation :  Dictionary 'dictionary' does not exist
+E1214 21:07:53.732671 10480 c_interface.cc:59] InvalidOperation :  Dictionary 'dictionary' does not exist
+E1214 21:08:00.790086 10480 c_interface.cc:59] InvalidOperation :  Dictionary 'dictionary' does not exist
